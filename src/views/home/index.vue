@@ -47,7 +47,14 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
+.home{
+  // position: relative;
+}
 .head{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #fff;
     h1{
         text-align: center;
         height: 40px;

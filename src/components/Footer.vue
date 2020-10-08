@@ -1,9 +1,13 @@
 <template>
   <div class="Footer">
     <ul>
-      <router-link tag="li" to="/home"><span class="iconfont icon-shouye"></span>首页</router-link>
-      <router-link tag="li" to="/shop"><span class="iconfont icon-gouwucheman"></span>购物车</router-link>
-      <router-link tag="li" to="/mine"><span class="iconfont icon-wodedangxuan"></span>我的</router-link>
+    
+      <van-goods-action>
+        <router-link tag="li" to="/home"><span class="iconfont icon-shouye"></span>首页</router-link>
+       <van-goods-action-icon icon="cart-o" text="购物车" :badge="this.$store.state.cartCounter" to="/shop" color="palevioletred"/>
+        <router-link tag="li" to="/mine"><span class="iconfont icon-wodedangxuan"></span>我的</router-link>
+       </van-goods-action>
+     
     </ul>
   </div>
 </template>
@@ -39,6 +43,7 @@ export default {
 </script>
 <style scoped lang='scss'>
 .Footer {
+  background: #fff;
   border-top: 1px solid #cecece;
   position: absolute;
   bottom: 0;
@@ -63,6 +68,9 @@ export default {
     .active{
       color: palevioletred;
     }
+  }
+  .van-goods-action-icon{
+    color: palevioletred;
   }
 }
 </style>
