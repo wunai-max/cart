@@ -18,7 +18,9 @@
                   class="iconfont icon-jianhao-"
                   @click="minus(item.id)"
                 ></span>
+                
                 <input type="text" :value="item.num" />
+               
                 <span class="iconfont icon-jiahao" @click="add(item.id)"></span>
               </div>
               <span

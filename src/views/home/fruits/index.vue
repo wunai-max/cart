@@ -1,6 +1,8 @@
 <template>
   <div class='fruits'>
-      1
+      <div class="content">
+        11
+      </div>
   </div>
 </template>
 
@@ -35,4 +37,7 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
+.content{
+  margin-top: 90px;
+}
 </style>
