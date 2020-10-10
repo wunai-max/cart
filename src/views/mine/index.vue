@@ -25,7 +25,7 @@
       </van-form>
       <div class="name" v-else>
         <h1>当前用户：{{name}}</h1>
-        <p>我的地址</p>
+        <p @click="site">我的地址</p>
         <van-button type="danger"  size="large" @click="del">退出登录</van-button>
       </div>
     </div>
@@ -78,7 +78,13 @@ export default {
     del(){
       removeToken();
       this.get();
+    },
+    site(){
+      this.$router.push({
+        path:"/site"
+      })
     }
+
   },
   mounted() {
     // 页面进入时加载内容

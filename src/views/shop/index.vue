@@ -105,7 +105,10 @@ export default {
     // 方法
     close(){
       if(getToken()){
-        alert("支付成功")
+         this.$store.commit("pay", this.footing);
+        this.$router.push({
+          path:"/buy"
+        })
       }else{
         this.$router.push({
           path:"/mine"
